@@ -22,7 +22,13 @@ public class Atm {
     public void onCommand(Command command) {
         BankProcess process = ProcessFactory.create(command);
         if (process != null) {
-            process.process(account, command);
+            try {
+                process.process(account, command);
+            } catch (InsufficientBalanceException e) {
+                System.out.println("You have no enough balance to operate.");
+            } catch (IllegalArgumentException e) {
+                System.out.println("The parameter to operate must be plus.");
+            }
         }
     }
 
