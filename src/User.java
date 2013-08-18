@@ -13,18 +13,18 @@ public class User {
         User user = new User();
         user.initAccount(800);
         Atm.getInstance().bindAccount(user.account);
-        user.operate(Command.DEPOSIT, 300);
+        user.operate(Command.DEPOSIT, 300f);
         user.operate(Command.CHECK_BALANCE, null);
-        user.operate(Command.WITH_DRAW, 1000);
+        user.operate(Command.WITH_DRAW, 1000f);
         user.operate(Command.CHECK_BALANCE, null);
-        user.operate(Command.BUY_ELECTRICITY, 100);
+        user.operate(Command.MUNICIPAL_ELECTRICITY, 100f);
         user.operate(Command.CHECK_BALANCE, null);
-        user.operate(Command.BUY_ELECTRICITY, 10);
+        user.operate(Command.MUNICIPAL_ELECTRICITY, 10f);
         user.operate(Command.CHECK_BALANCE, null);
         Atm.getInstance().unbindAccount();
     }
 
-    private void operate(int command, Integer param) {
-        Atm.getInstance().onCommand(command, param);
+    private void operate(int code, Float param) {
+        Atm.getInstance().onCommand(new Command(code, param));
     }
 }

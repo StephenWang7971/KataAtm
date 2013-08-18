@@ -10,7 +10,7 @@ public class Account {
         return amount;
     }
 
-    public void addAmount(Integer param) {
+    public void addAmount(Float param) {
         if (amount + param < 0 ) {
             System.out.println("You have no enough balance to operate.");
             return;
