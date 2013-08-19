@@ -1,3 +1,6 @@
+package com.sec.kata.atm;
+
+import com.sec.kata.atm.exception.InsufficientBalanceException;
 
 public class Account {
     private int amount;

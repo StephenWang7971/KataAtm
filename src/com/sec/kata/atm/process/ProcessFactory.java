@@ -1,3 +1,7 @@
+package com.sec.kata.atm.process;
+
+import com.sec.kata.atm.command.Command;
+
 public class ProcessFactory {
     public static BankProcess create(Command command) {
         BankProcess process = null;

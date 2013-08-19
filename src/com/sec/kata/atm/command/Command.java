@@ -1,3 +1,4 @@
+package com.sec.kata.atm.command;
 
 public class Command {
 

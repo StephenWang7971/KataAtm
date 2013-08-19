@@ -1,3 +1,8 @@
+package com.sec.kata.atm.process;
+
+import com.sec.kata.atm.command.Command;
+import com.sec.kata.atm.Account;
+
 public class Banking implements BankProcess {
     @Override
     public void process(Account account, Command command) {

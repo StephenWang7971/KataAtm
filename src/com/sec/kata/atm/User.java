@@ -1,13 +1,14 @@
+package com.sec.kata.atm;
+
+import com.sec.kata.atm.command.Command;
 
 public class User {
 
      Account account = new Account();
 
-
     public void initAccount(int amount) {
         account.setAmount(amount);
     }
-
 
     public static  void main(String [] args) {
         User user = new User();
